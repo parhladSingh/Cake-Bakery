@@ -31697,8 +31697,12 @@ function updateCart(cake) {
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     var cake = JSON.parse(btn.dataset.cake); //setting the data-attribute& converting into the object
-    updateCart(cake);
-    // console.log(cake)
+    let logoutButton = document.querySelector('#logout'); // Check if logout button exists
+    if (logoutButton) {
+      updateCart(cake);
+    } else {
+      window.location.href = "/login"
+    }
   });
 });
 
