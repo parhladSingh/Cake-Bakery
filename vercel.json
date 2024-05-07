@@ -4,7 +4,7 @@
       {
         "src": "server.js",
         "use": "@vercel/node",
-        "config": { "command": "npm run production" }
+        "config": { "command": "npm run production" } 
       }
     ],
     "routes": [
