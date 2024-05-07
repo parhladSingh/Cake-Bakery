@@ -115,3 +115,6 @@ eventEmitter.on('orderUpdated',(data)=>{
 eventEmitter.on('orderPlaced',(data)=>{
     io.to('adminRoom').emit('orderPlaced',data)
 })
+
+// Export the Express API
+module.exports = app;
