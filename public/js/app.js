@@ -31583,73 +31583,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(noty__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-// import axios from 'axios'
-
-// import Noty from 'noty'
-// import moment from 'moment';
-
-// export function initAdmin() {
-//     const orderTableBody = document.querySelector('#orderTableBody');
-//     let orders = [];
-//     let markup = '';
-
-//     axios.get('/admin/order', {
-//         headers: {
-//             "X-Requested-With": 'XMLHttpRequest'
-//         }
-//     }).then(res => {
-//         orders = res.data;
-//         markup = generateMarkup(orders);
-//         orderTableBody.innerHTML = markup;
-//     }).catch(err => {
-//         console.log(err);
-//     });
-
-//     function renderItems(items) {
-//         let parsedItems = Object.values(items);
-//         return parsedItems.map((menuItem) => {
-//             return `
-//                 <p>${menuItem.item.name} - ${menuItem.qty} pcs</p>
-//             `
-//         }).join('');
-//     }
-
-//     function generateMarkup(orders) {
-//         return orders.map(order => {
-//             return `
-//                 <tr>
-//                     <td class="border px-4 py-2 text-green-900">
-//                         <p>${ order._id}</p>
-//                         <div>${renderItems(order.items)}</div>
-//                     </td>
-//                     <td class="border px-4 py-2">${order.customerId.name}</td>
-//                     <td class="border px-4 py-2">${order.address}</td>
-//                     <td class="border px-4 py-2">
-//                         <div class="inline-block relative w-64">
-//                             <form action="/admin/order/status" method="POST">
-//                                 <input type="hidden" name="orderId" value="${order._id}">
-//                                 <select name="status" onchange="this.form.submit()" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-//                                     <option value="order_placed" ${order.status === 'order_placed' ? 'selected' : ''}>Placed</option>
-//                                     <option value="confirmed" ${order.status === 'confirmed' ? 'selected' : ''}>Confirmed</option>
-//                                     <option value="prepared" ${order.status === 'prepared' ? 'selected' : ''}>Prepared</option>
-//                                     <option value="delivered" ${order.status === 'delivered' ? 'selected' : ''}>Delivered</option>
-//                                     <option value="completed" ${order.status === 'completed' ? 'selected' : ''}>Completed</option>
-//                                 </select>
-//                             </form>
-//                         </div>
-//                     </td>
-//                     <td class="border px-4 py-2">
-//                         ${moment(order.createdAt).format('hh:mm A')}
-//                     </td>
-//                 </tr>
-//             `
-//         }).join('');
-//     }
-// }
-
-// // Export the initAdmin function
-// module.exports = { initAdmin };
-
 
 
 
@@ -31734,12 +31667,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
-// import  { initAdmin }  from './admin'
 
 // Using require syntax
 var _require = __webpack_require__(/*! ./admin */ "./resources/js/admin.js"),
   initAdmin = _require.initAdmin;
-// import  { initAdmin }  from './admin'
 
 var addToCart = document.querySelectorAll('.add-to-cart');
 var cartCounter = document.querySelector('#cartCounter');
@@ -31760,18 +31691,14 @@ function updateCart(cake) {
       text: 'Something went wrong',
       progressBar: false
       // layout:'topLeft'                             // we can also change the position msg by use of layout
-    }).show(); 
+    }).show();
   });
 }
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     var cake = JSON.parse(btn.dataset.cake); //setting the data-attribute& converting into the object
-    let logoutButton = document.querySelector('#logout'); // Check if logout button exists
-    if (logoutButton) {
-      updateCart(cake);
-    } else {
-      window.location.href = "/login"
-    }
+    updateCart(cake);
+    // console.log(cake)
   });
 });
 
@@ -31841,48 +31768,6 @@ socket.on('orderUpdated', function (data) {
     // we can also change the position msg by use of layout
   }).show();
 });
-//order_chkhiojhsodjijpojpofdsdfd
-
-// import axios from 'axios';
-// import Noty from 'noty';
-
-// // Function to update cart via POST request to '/update-cart'
-// function updateCart(cake) {
-//     axios.post('/update-cart', cake)
-//         .then(res => {
-//             const { totalQty } = res.data; // Extract totalQty from response data
-//             document.querySelector('#cartCounter').innerText = totalQty; // Update cart counter
-
-//             // Show success notification using Noty
-//             new Noty({
-//                 type: 'success',
-//                 timeout: 1000,
-//                 text: 'Item added to cart',
-//                 progressBar: false
-//             }).show();
-//         })
-//         .catch(err => {
-//             console.error('Error updating cart:', err);
-//             // Show error notification using Noty
-//             new Noty({
-//                 type: 'error',
-//                 timeout: 1000,
-//                 text: 'Something went wrong',
-//                 progressBar: false
-//             }).show();
-//         });
-// }
-
-// // Add event listener to 'Add to Cart' buttons
-// document.addEventListener('DOMContentLoaded', () => {
-//     const addToCartButtons = document.querySelectorAll('.add-to-cart');
-//     addToCartButtons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             const cakeData = JSON.parse(button.dataset.cake); // Parse cake data from dataset
-//             updateCart(cakeData); // Call updateCart function with cake data
-//         });
-//     });
-// });
 
 /***/ }),
 
@@ -31904,8 +31789,8 @@ socket.on('orderUpdated', function (data) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Hp\Desktop\Placements\MERN Stack\My Projects\1_Other\realtime_cake\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Hp\Desktop\Placements\MERN Stack\My Projects\1_Other\realtime_cake\resources\scss\app.scss */"./resources/scss/app.scss");
+__webpack_require__(/*! C:\Users\Hp\Cake-Bakery\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Hp\Cake-Bakery\resources\scss\app.scss */"./resources/scss/app.scss");
 
 
 /***/ })

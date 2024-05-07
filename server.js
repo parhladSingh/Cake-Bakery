@@ -15,7 +15,7 @@ const Emitter = require('events')
 const PORT = process.env.PORT || 3040; 
 
 // MongoDB connection URI
-const mongoURI = 'mongodb://127.0.0.1:27017/cake'; // Replace 'cake' with your database name
+const mongoURI = process.env.MONGO_URL;
 
 // Connect to MongoDB
 mongoose.connect(mongoURI); 
