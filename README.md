@@ -12,7 +12,7 @@ Welcome to Cake Bakery, a full-stack web application for managing cake orders se
 - HTML
 - Tailwind CSS (for contemporary styling)
 - JavaScript
-
+  
 #### Backend:
 - Node.js
 - Express.js
@@ -35,12 +35,6 @@ Welcome to Cake Bakery, a full-stack web application for managing cake orders se
 5. Order Placement: Seamless order placement process with provision for phone number and address.
 6. Order Tracking: Track the status of placed orders and view detailed information, including an interactive order map displaying confirmation and delivery status.
 7. Admin Panel: Dedicated interface for administrators to manage all order details, including updates on order status and communication with customers.
-
-### Test Users
-
-**Customer -**  *Email* : parhladsingh760@gmail.com, *Password* : 123  
-
-**Admin -**  *Email* : admin@gmail.com, *Password* : 654
 
 ## Getting Started 
 
@@ -75,3 +69,9 @@ Follow the steps below to install and run the project on your local machine.
   npm run watch
   ```
 **7. Visit `http://localhost:3040` to see the magic.**
+
+### Test Users
+
+**Customer -**  *Email* : parhladsingh760@gmail.com, *Password* : 123  
+
+**Admin -**  *Email* : admin@gmail.com, *Password* : 654
