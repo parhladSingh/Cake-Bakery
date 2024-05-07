@@ -9,24 +9,25 @@ body{
   
 }
 
-nav li:last-child a{
-    background: $primary;
-}
-
-nav li a{
-    &:hover{
-        background: $primary-hover;
-
-    }
-}
-
-nav li a{
-    &:hover{
-        transition: $smooth;
-        color: $primary;
-
-    }
-}
+.navItem a {
+    padding: 2px;
+    border-radius: 4px;
+  }
+  
+  .navItem a:hover {
+    transition: all 0.1s ease-in-out;
+    border-bottom: 2px solid black;
+    color: #FE5F1E;
+  }
+  
+  .cartLogo a {
+    background: #FE5F1E;
+  }
+  
+  .cartLogo a:hover {
+    background: #fe5d1eb6;
+    transition: all 0.3s ease-in-out;
+  }
 
 section.hero{
     background-color: $secondary;
