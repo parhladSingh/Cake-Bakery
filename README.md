@@ -70,7 +70,7 @@ Follow the steps below to install and run the project on your local machine.
   ```
 **7. Visit `http://localhost:3040` to see the magic.**
 
-### Test Users
+## Test Users
 
 **Customer -**  *Email* : parhladsingh760@gmail.com, *Password* : 123  
 
