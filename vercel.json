@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node",
-      "config": { "command": "npm run production" } 
+      "use": "@vercel/node"
     }
   ],
   "routes": [
