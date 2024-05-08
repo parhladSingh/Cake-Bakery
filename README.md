@@ -7,6 +7,10 @@ Welcome to Cake Bakery, a full-stack web application for managing cake orders se
 - **Live link** - https://cake-bakery.onrender.com/
 
 
+https://github.com/parhladSingh/Cake-Bakery/assets/142223673/eaeb4a82-6e6b-431c-aff8-e909e45367f4
+
+
+
 ## Technologies Used
 #### Frontend:
 - HTML
